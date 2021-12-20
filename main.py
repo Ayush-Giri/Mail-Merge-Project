@@ -28,8 +28,9 @@ for name in people_name_list:
             else:
                 final_message.append(message)
 
-        for final_words in final_message:
-            invitation.write(final_words)
+    with open(f"Output/ReadyToSend/{name}.txt", mode="a") as invitation:
+        for words in final_message:
+            invitation.write(words)
 
 
 
